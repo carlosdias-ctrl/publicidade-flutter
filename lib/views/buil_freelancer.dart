@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:publicidade/models/categoria.dart';
 
+//CARREGAMENTO DA LISTA DE AUTONOMOS
+
 class BuildFreelancer extends StatefulWidget {
   @override
   _BuildFreelancerState createState() => _BuildFreelancerState();
@@ -22,16 +24,14 @@ class _BuildFreelancerState extends State<BuildFreelancer> {
         child: Column(
           children: <Widget>[
             Container(
-              color: Colors.grey,
-              // decoration: new BoxDecoration(
-              //   color: Colors.grey,
-              //   image: DecorationImage(
-              //     image: NetworkImage(
-              //        ),
-              //     fit: BoxFit.fill,
-              //   ),
-              //   borderRadius: BorderRadius.circular(20),
-              // ),
+              decoration: new BoxDecoration(
+                color: Colors.grey,
+                image: DecorationImage(
+                  image: NetworkImage(''),
+                  fit: BoxFit.fill,
+                ),
+                borderRadius: BorderRadius.circular(20),
+              ),
               height: 150.0,
               width: 175.0,
             ),

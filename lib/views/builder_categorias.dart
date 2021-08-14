@@ -30,7 +30,6 @@ class _BuildCategoriasState extends State<BuildCategorias> {
                   image: NetworkImage(widget.categoria.foto),
                   fit: BoxFit.fill,
                 ),
-                color: Colors.grey,
                 borderRadius: BorderRadius.circular(20),
               ),
               height: 150.0,

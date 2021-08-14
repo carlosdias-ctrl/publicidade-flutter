@@ -32,6 +32,8 @@ class _Home2State extends State<Home2> {
     _getCurrentLocation2();
   }
 
+  //TRASNFORMA LATITUDE E LONGITUDE EM UM ENDEREÇO FISICO
+
   _getCurrentLocation() async {
     final geoposition = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.bestForNavigation);
@@ -105,6 +107,7 @@ class _Home2State extends State<Home2> {
                         top: 174,
                         left: 15,
                       ),
+                      //PASSA O NOME DA CIDADE
                       child: Row(
                         children: [
                           Text(
@@ -128,6 +131,7 @@ class _Home2State extends State<Home2> {
                         height: 40,
                         child: Container(
                           child: Text(
+                            //FORNECE A DATA ATUAL
                             DateFormat(" EEE dd MMM yyyy ", "pt_BR")
                                 .format(data),
                             style: TextStyle(
@@ -159,6 +163,7 @@ class _Home2State extends State<Home2> {
                       child: Container(
                         child: Padding(
                           padding: const EdgeInsets.only(top: 2.0),
+                          //FORNECE TODOS OS DADOS DE LOCALIZAÇÃO
                           child: Text(
                             address,
                             style: TextStyle(
@@ -201,6 +206,7 @@ class _Home2State extends State<Home2> {
                               Padding(
                                 padding: const EdgeInsets.only(left: 15),
                                 child: Text(
+                                  //PEGA TODAS AS CATEGORIAS DO BANCO DE DADOS
                                   'CATEGORIAS',
                                   style: TextStyle(
                                     fontSize: 20,
@@ -216,6 +222,7 @@ class _Home2State extends State<Home2> {
                                 },
                                 child: Container(
                                   child: Text(
+                                    //PEGA TODAS AS CATEGORIAS DO BANCO DE DADOS
                                     'Ver Tudo',
                                     style: TextStyle(
                                       fontSize: 12,
@@ -238,6 +245,7 @@ class _Home2State extends State<Home2> {
                           child: ListView.builder(
                             scrollDirection: Axis.horizontal,
                             itemCount: categoria.count,
+                            //AS CATEGORIAS ESTAO SENDO CONSTRUIDAS LA VIEW BUILD_CATEGORIAS
                             itemBuilder: (ctx, i) => BuildCategorias(
                               categoria.byIndex(i),
                             ),
@@ -254,6 +262,7 @@ class _Home2State extends State<Home2> {
                             children: <Widget>[
                               Padding(
                                 padding: const EdgeInsets.only(left: 15),
+                                //PEGA OS MAIS BEM AVALIADOS
                                 child: Text(
                                   'Populares',
                                   style: TextStyle(
@@ -270,6 +279,7 @@ class _Home2State extends State<Home2> {
                                 },
                                 child: Container(
                                   child: Text(
+                                    //PEGA TODAS AS CATEGORIAS MAIS POPULARES
                                     'Ver Tudo',
                                     style: TextStyle(
                                       fontSize: 12,
@@ -288,9 +298,12 @@ class _Home2State extends State<Home2> {
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemCount: 4,
+                          //A LISTA DE POPULARES ESTA SENDO CARREGADA LA NA VIEW BUILD_POPULARES
                           itemBuilder: (ctx, i) => BuildPopulares(),
                         ),
                       ),
+
+                      // LISTA DE FREELANCERS OU AUTONOMOS
                       Padding(
                         padding: const EdgeInsets.only(top: 540),
                         child: Container(
@@ -302,7 +315,7 @@ class _Home2State extends State<Home2> {
                               Padding(
                                 padding: const EdgeInsets.only(left: 15),
                                 child: Text(
-                                  'Freelancer',
+                                  'Autônomos',
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.deepPurple[900],
@@ -310,6 +323,9 @@ class _Home2State extends State<Home2> {
                                   ),
                                 ),
                               ),
+
+                              //CARREGA A LISTA DE CADASTRADOS AUTONOMOS
+
                               GestureDetector(
                                 onTap: () {
                                   Navigator.pushNamed(
@@ -317,6 +333,7 @@ class _Home2State extends State<Home2> {
                                 },
                                 child: Container(
                                   child: Text(
+                                    //CARREGA UMA PAGEVIEW COM TODOS OS AUTÔNOMOS
                                     'Ver Tudo',
                                     style: TextStyle(
                                       fontSize: 12,
@@ -335,6 +352,7 @@ class _Home2State extends State<Home2> {
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemCount: 4,
+                          //A LISTA DE AUTONOMOS ESTA SENDO CARREGADA LÃ NA VIEW BUILD_FREELANCER
                           itemBuilder: (context, index) => BuildFreelancer(),
                         ),
                       ),

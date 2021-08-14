@@ -65,7 +65,7 @@ class _AllUsuariosState extends State<AllUsuarios> {
                         height: 40.0,
                         child: Container(
                           child: Text(
-                            '',
+                            '0.00 itens',
                             // '${categoria.length} Itens',
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -82,6 +82,9 @@ class _AllUsuariosState extends State<AllUsuarios> {
               ),
               expandedHeight: 170.0,
             ),
+
+            //CONTAINER COM AS CATEGORIAS ESPECIFICAS
+
             SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) => Container(
@@ -92,9 +95,8 @@ class _AllUsuariosState extends State<AllUsuarios> {
                       topRight: const Radius.circular(40.0),
                     ),
                   ),
-                  //color: Colors.white,
                   width: 30,
-                  height: 640.0,
+                  height: 680.0,
                   child: Stack(
                     children: <Widget>[
                       Padding(
@@ -102,6 +104,9 @@ class _AllUsuariosState extends State<AllUsuarios> {
                         child: Container(
                           width: 400.0,
                           height: 590.0,
+
+                          //LIST VIEW TA SENDO CARREGADO LA NA VIEW BUILD_SUARIO
+
                           child: ListView.builder(
                             scrollDirection: Axis.vertical,
                             itemCount: usuario.count,
@@ -114,6 +119,9 @@ class _AllUsuariosState extends State<AllUsuarios> {
                     ],
                   ),
                 ),
+
+                //UM UNICO CONTAINER PRA FORMAR O LISTVIEW DE UMA CATEGORIA ESPECIFICA
+
                 childCount: 1,
               ),
             ),

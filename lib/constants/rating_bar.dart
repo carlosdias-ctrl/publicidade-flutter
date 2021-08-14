@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// AVALIAÇÃO DOS USUARIOS PARA SERVIÇOS PRESTADOS PELAS EMPRESAS CADASTRADAS
+
 class RatingDialog extends StatefulWidget {
   @override
   _RatingDialogState createState() => _RatingDialogState();

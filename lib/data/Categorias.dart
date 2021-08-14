@@ -31,4 +31,10 @@ const Categorias = {
     foto:
         'https://image.freepik.com/vetores-gratis/hoteis-e-viagens-icons_23-2147498575.jpg',
   ),
+  '6': const CategoriaDb(
+    id: '6',
+    name: 'Internet',
+    foto:
+        'https://image.freepik.com/vetores-gratis/icone-de-tecnologia-de-vetor-de-internet-wi-fi-em-roxo-neon-em-fundo-gradiente_53876-112152.jpg',
+  ),
 };

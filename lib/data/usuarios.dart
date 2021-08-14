@@ -36,13 +36,35 @@ const Usuarios = {
   ),
   '4': const UsuarioDb(
     id: '4',
-    name: 'Hotel Golden Lis',
+    name: 'Hotel Soledade',
     telefone: '63984214721',
     instagram: 'exemplo',
     mail: 'hotel@goldenlis.com',
     facebook: 'exemplo',
     whats: '63984214721',
     urlFoto:
-        'https://melhorespousadas.tur.br/uploads/pousadas-fotos/037/hotel-golden-lis-405375.jpg',
+        'https://www.ferias.tur.br/thumbnailcli/11540/900/500/g_1069187_530603290339943_143448485_n.jpg',
+  ),
+  '5': const UsuarioDb(
+    id: '5',
+    name: 'Nossa Pousada',
+    telefone: '63984214721',
+    instagram: 'exemplo',
+    mail: 'hotel@goldenlis.com',
+    facebook: 'exemplo',
+    whats: '63984214721',
+    urlFoto:
+        'http://www.superamarelas.com/phpthumb/phpThumb.php?src=/files/3094_24.jpg&w=750',
+  ),
+  '6': const UsuarioDb(
+    id: '6',
+    name: 'Netbox Telecom',
+    telefone: '63984214721',
+    instagram: 'exemplo',
+    mail: 'exemplo',
+    facebook: 'exemplo',
+    whats: '63984214721',
+    urlFoto:
+        'https://yt3.ggpht.com/aq_ZNjxwkBf0Y37uX9bFu_D_8Gqfc8gI4jXXHOMHElvXeHCEPw6_WTcpuuCErqZVPhkmU1P1nk4=s900-c-k-c0x00ffffff-no-rj',
   ),
 };

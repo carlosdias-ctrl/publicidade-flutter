@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:publicidade/models/categoria.dart';
 
+//CONSTRUÇÃO DA LISTA DE POPULARES
+
 class BuildPopulares extends StatefulWidget {
   @override
   _BuildPopularesState createState() => _BuildPopularesState();
@@ -22,16 +24,14 @@ class _BuildPopularesState extends State<BuildPopulares> {
         child: Column(
           children: <Widget>[
             Container(
-              color: Colors.grey,
-              // decoration: new BoxDecoration(
-              //   color: Colors.grey,
-              //   image: DecorationImage(
-              //     image: NetworkImage(
-              //        ),
-              //     fit: BoxFit.fill,
-              //   ),
-              //   borderRadius: BorderRadius.circular(20),
-              // ),
+              decoration: new BoxDecoration(
+                color: Colors.grey,
+                image: DecorationImage(
+                  image: NetworkImage(''),
+                  fit: BoxFit.fill,
+                ),
+                borderRadius: BorderRadius.circular(20),
+              ),
               height: 150.0,
               width: 175.0,
             ),
